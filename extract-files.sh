@@ -126,7 +126,11 @@ function blob_fixup {
         vendor/lib*/soundfx/libswdap.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
-        system_ext/lib64/libsink.so)
+        system_ext/lib64/libimsma.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libsink.so" "libsink-mtk.so" "${2}"
+            ;;
+        system_ext/lib64/libsink-mtk.so)
             [ "$2" = "" ] && return 0
             grep -q "libaudioclient_shim" "${2}" || "${PATCHELF}" --add-needed "libaudioclient_shim.so" "${2}"
             ;;
