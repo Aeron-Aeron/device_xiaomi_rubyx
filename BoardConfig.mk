@@ -200,6 +200,9 @@ WIFI_HAL_INTERFACE_COMBINATIONS += ,{{{STA}, 1}, {{NAN}, 1}}
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_FEATURE_HOSTAPD_11AX := true
 
+# Better Optimization flags
+BOARD_COMPILER_OPTIMIZATION := speed
+
 # Inherit the proprietary files
 -include device/xiaomi/miuicamera-rubyx/BoardConfig.mk
 include vendor/xiaomi/rubyx/BoardConfigVendor.mk
