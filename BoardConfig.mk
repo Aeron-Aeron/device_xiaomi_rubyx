@@ -125,7 +125,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6877
-BOARD_HAS_MTK_HARDWARE := true
 BOARD_VENDOR := xiaomi
 
 # Power
