@@ -341,6 +341,10 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
+#Ship libbase_shim as product package
+PRODUCT_PACKAGES += \
+    libbase_shim
+
 # Reduce system server verbosity.
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 PRODUCT_OTHER_JAVA_DEBUG_INFO := false
