@@ -99,9 +99,7 @@ internal class DolbyController private constructor(
 
         // Restore our main settings
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-
-        // Don't enable Dolby at boot anymore.
-        // dsOn = prefs.getBoolean(DolbyConstants.PREF_ENABLE, true)
+        dsOn = prefs.getBoolean(DolbyConstants.PREF_ENABLE, true)
 
         context.resources.getStringArray(R.array.dolby_profile_values)
             .map { it.toInt() }
