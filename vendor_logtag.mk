@@ -259,4 +259,5 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.log.tag.gralloc4=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.MDP=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.OpenGLRenderer=$(VENDOR_LOG_LEVEL) \
-    persist.log.tag.C2MtkBufferManager=$(VENDOR_LOG_LEVEL)
+    persist.log.tag.C2MtkBufferManager=$(VENDOR_LOG_LEVEL) \
+    persist.log.tag.FrameTracker=$(VENDOR_LOG_LEVEL)
