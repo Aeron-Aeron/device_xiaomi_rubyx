@@ -27,6 +27,10 @@ on early-init && property:ro.boot.hwc=GL
     setprop persist.vendor.nfc.config_file_name /vendor/etc/st21nfc_conf_${ro.boot.product.hardware.sku}_gl.txt
     setprop ro.boot.product.vendor.sku nfc
 
+on early-init && property:ro.boot.hwlevel=P1 && property:ro.boot.hwc=IN
+    setprop persist.vendor.nfc.config_file_name /vendor/etc/st21nfc_conf_${ro.boot.product.hardware.sku}.txt
+    setprop ro.boot.product.vendor.sku nfc
+
 on early-init && property:ro.boot.hwc=IN
     setprop ro.boot.product.vendor.sku nonfc
 
