@@ -637,4 +637,7 @@
 
     <!-- Whether device has turbo power charging support -->
     <bool name="config_hasTurboPowerCharger">true</bool>
+
+     <!-- Disable ripple when media is playing -->
+    <bool name="config_disableMediaPlayerRipple">true</bool>
 </resources>
