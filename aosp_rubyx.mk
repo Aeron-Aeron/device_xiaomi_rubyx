@@ -13,7 +13,18 @@ $(call inherit-product, device/xiaomi/rubyx/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_rubyx
+# The Pixel Project Stuff
+CUSTOM_BUILD_TYPE := OFFICIAL
+WITH_GMS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_STOCK_AICORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+CUSTOM_MAINTAINER := Aeron
+TARGET_ENABLE_BLUR := true
+
+PRODUCT_NAME := aosp_rubyx
 PRODUCT_DEVICE := rubyx
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
