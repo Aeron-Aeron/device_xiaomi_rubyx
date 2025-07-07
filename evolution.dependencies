@@ -44,5 +44,10 @@
     "repository": "Aeron-Aeron/vendor_xiaomi_miuicamera-rubyx",
     "target_path": "vendor/xiaomi/miuicamera-rubyx",
     "remote": "github"
+  },
+  {
+  "repository": "Aeron-Aeron/packages_apps_ViPER4AndroidFX",
+  "target_path": "packages/apps/ViPER4AndroidFX",
+  "remote": "github"
   }
 ]
