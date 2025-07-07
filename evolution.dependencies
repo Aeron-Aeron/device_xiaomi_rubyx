@@ -1,0 +1,48 @@
+[
+  {
+    "repository": "Aeron-Aeron/device_xiaomi_rubyx",
+    "target_path": "device/xiaomi/rubyx",
+    "branch": "evolution",
+    "remote": "github"
+  },
+  {
+    "repository": "Aeron-Aeron/device_xiaomi_miuicamera-rubyx",
+    "target_path": "device/xiaomi/miuicamera-rubyx",
+    "branch": "lineage-22.2",
+    "remote": "github"
+  },
+  {
+    "repository": "xiaomi-mediatek-devs/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch": "lineage-22.2",
+    "remote": "github"
+  },
+  {
+    "repository": "xiaomi-mediatek-devs/android_hardware_mediatek",
+    "target_path": "hardware/mediatek",
+    "branch": "lineage-22.2",
+    "remote": "github"
+  },
+  {
+    "repository": "Aeron-Aeron/kernel_xiaomi_mt6877",
+    "target_path": "kernel/xiaomi/mt6877",
+    "remote": "github"
+  },
+  {
+    "repository": "xiaomi-mediatek-devs/android_device_mediatek_sepolicy_vndr",
+    "target_path": "device/mediatek/sepolicy_vndr",
+    "branch": "lineage-22.2",
+    "remote": "github"
+  },
+  {
+    "repository": "Aeron-Aeron/vendor_xiaomi_rubyx",
+    "target_path": "vendor/xiaomi/rubyx",
+    "branch": "staging/lineage-23.0",
+    "remote": "github"
+  },
+  {
+    "repository": "Aeron-Aeron/vendor_xiaomi_miuicamera-rubyx",
+    "target_path": "vendor/xiaomi/miuicamera-rubyx",
+    "remote": "github"
+  }
+]
