@@ -132,7 +132,7 @@ function blob_fixup {
             ;;
         system_ext/lib64/libsink-mtk.so)
             [ "$2" = "" ] && return 0
-            grep -q "libaudioclient_legacy_shim" "${2}" || "${PATCHELF}" --add-needed "libaudioclient_legacy_shim.so" "${2}"
+            grep -q "libaudioclient_shim" "${2}" || "${PATCHELF}" --add-needed "libaudioclient_shim.so" "${2}"
             ;;
         vendor/lib*/libnvram.so|\
         vendor/lib64/libsysenv.so|\
