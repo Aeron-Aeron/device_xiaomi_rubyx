@@ -875,6 +875,7 @@ on property:vendor.mtk.md1.status=reset
 on property:sys.boot_completed=1
     restart android-hardware-media-c2-hal-1-2
     chmod 440 /proc/net/unix
+    write /proc/sys/vm/kswapd_threads 1
 
 # VSIM service (vendor OSI)
 service osi /system/bin/osi
@@ -883,3 +884,14 @@ service osi /system/bin/osi
     disabled
     oneshot
     #seclabel u:r:osi:s0
+
+service vendor.qti.hardware.display.composer /vendor/bin/hw/vendor.qti.hardware.display.composer-service
+    override
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    socket pps stream 0660 system system
+    writepid /dev/cpuset/foreground/tasks
+    task_profiles ProcessCapacityHigh HighPerformance

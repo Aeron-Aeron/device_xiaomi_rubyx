@@ -12,6 +12,8 @@ vendor.audio.spkcal.copy.inhal=true
 vendor.audiohal.telephonytx.type=2
 vendor.audio.hdr.record.enable=false
 
+debug.composition.type=hw
+
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
 bluetooth.profile.a2dp.source.enabled?=true
@@ -176,6 +178,10 @@ ro.netflix.bsp_rev=MTK6877-33678-1
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
+# Graphics
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=20
+
 # Gatekeeper
 ro.hardware.gatekeeper=beanpod
 
@@ -195,6 +201,7 @@ ro.vendor.mtk_config_max_dram_size=0x800000000
 ro.vendor.mtk_sec_video_path_support=1
 ro.vendor.mtk_video_hevc_enc_support=1
 vendor.mtk.vdec.waitkeyframeforplay=9
+debug.sf.defer_refresh_rate_when_off=1
 
 # Mediatek
 ro.vendor.mediatek.platform=MT6877
@@ -204,9 +211,9 @@ ro.vendor.mediatek.version.release=alps-mp-s0.mp1.tc8sp-cs1-V1.0.13_xiaomi.s0mp1
 # Memory
 ro.config.fha_enable=true
 ro.sys.fw.bg_apps_limit=32
-ro.config.dha_cached_max=16
-ro.config.dha_empty_max=42
-ro.config.dha_empty_init=32
+ro.config.dha_cached_max=12
+ro.config.dha_empty_max=21
+ro.config.dha_empty_init=13
 ro.config.dha_lmk_scale=0.545
 
 # Neural Networks

@@ -14,3 +14,6 @@ persist.dbg.wfc_avail_ovr=1
 
 # Zygote
 zygote.critical_window.minute=10
+
+# MTE
+persist.arm64.memtag.system_server=off

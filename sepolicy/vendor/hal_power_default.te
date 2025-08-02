@@ -6,3 +6,6 @@ allow hal_power_default vendor_sysfs_gpu:file rw_file_perms;
 
 # To access display idle state
 allow hal_power_default vendor_sysfs_display:file r_file_perms;
+
+# To allow read hal_camera_default
+# allow vendor_hal_perf_default hal_camera_default:file { read open };
