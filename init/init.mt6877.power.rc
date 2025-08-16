@@ -115,6 +115,16 @@ on property:sys.boot_completed=1
     chmod 0664 /proc/ppm/policy/cluster_1_max_freq
     chmod 0664 /proc/ppm/policy/cluster_0_max_freq
 
+service vendor.gralloc-4-0 /vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
+    class hal animation
+    interface android.hardware.graphics.allocator@4.0::IAllocator default
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    task_profiles ProcessCapacityHigh HighPerformance
+    override
+
 service vendor.hwcomposer-2-3 /vendor/bin/hw/android.hardware.graphics.composer@2.3-service
     class hal animation
     user system
