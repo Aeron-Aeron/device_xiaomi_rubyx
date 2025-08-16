@@ -51,7 +51,6 @@ on enable-low-power
     write /sys/block/dm-4/queue/read_ahead_kb 128
     write /sys/block/dm-5/queue/read_ahead_kb 128
 
-    write /proc/cpufreq/cpufreq_sched_disable 0
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
     # Enable big task rotation
@@ -116,3 +115,11 @@ on property:sys.boot_completed=1
     chmod 0664 /proc/ppm/policy/cluster_1_max_freq
     chmod 0664 /proc/ppm/policy/cluster_0_max_freq
 
+service vendor.hwcomposer-2-3 /vendor/bin/hw/android.hardware.graphics.composer@2.3-service
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    task_profiles HighPerformance
+    override
