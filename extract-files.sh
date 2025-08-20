@@ -136,6 +136,7 @@ function blob_fixup {
             ;;
         vendor/lib*/libnvram.so|\
         vendor/lib64/libsysenv.so|\
+        vendor/lib64/libtflite_mtk.so|\
         vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
